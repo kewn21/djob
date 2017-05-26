@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<engine>
+	<version>1</version>
+	<storage>
+		<class>org.kesy.djob.dex.datax.engine.storage.RAMStorage</class>
+		<linelimit>3000</linelimit>
+		<bytelimit>1000000</bytelimit>
+		<buffersize>50</buffersize>
+	</storage>
+</engine>

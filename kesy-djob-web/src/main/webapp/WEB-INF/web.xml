@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	version="2.4"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>kesy djob</display-name>
+
+	<!-- Spring 配置文件位置 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:spring/*.xml</param-value>
+	</context-param>
+	<!-- Spring 配置文件的加载器 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<filter>
+		<filter-name>IPFilter</filter-name>
+		<filter-class>org.kesy.djob.web.IPFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>IPFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>data-service</servlet-name>
+		<servlet-class>org.kesy.djob.web.DataCommandServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>data-service</servlet-name>
+		<url-pattern>/dataservice.dsr</url-pattern>
+	</servlet-mapping>
+
+</web-app>

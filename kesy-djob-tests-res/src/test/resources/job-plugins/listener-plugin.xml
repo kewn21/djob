@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<listeners>
+	
+	<listener>
+		<name>listener1</name>
+		<clazz>org.kesy.djob.sdu.listener.impl.JobListener4JobStore</clazz>
+	</listener>
+	
+	<!-- <listener>
+		<name>listener2</name>
+		<clazz>org.kesy.djob.sdu.listener.impl.JobListener4JobStore</clazz>
+		<params>
+			<triggers>trigger1</triggers>
+			<only-upgrade>true</only-upgrade>
+		</params>
+	</listener> -->
+	
+</listeners>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tasks>
+
+	<task>
+		<name>ClientGameChargeDispatcherTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.clientgame.charge.ClientGameChargeDispatcherTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>ClientGameMarketMediaAdvTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.clientgame.market.ClientGameMarketMediaAdvTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+	<task>
+		<name>ClientGameMarketMediaAdvTotalTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.clientgame.market.ClientGameMarketMediaAdvTotalTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>ClientGameMarketNewsRecTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.clientgame.market.ClientGameMarketNewsRecTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>ClientGameMarketYYRegisterTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.clientgame.market.ClientGameMarketYYRegisterTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>ClientGameMarketMediaAdvCalcTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.clientgame.market.ClientGameMarketMediaAdvCalcTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>ClientGameMarketNewsRecCalcTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.clientgame.market.ClientGameMarketNewsRecCalcTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+	<task>
+		<name>ClientGameNewLoginGenTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.clientgame.base.ClientGameNewLoginGenTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>ClientGameMarketNetBarCalcTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.clientgame.market.ClientGameMarketNetBarCalcTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+	<task>
+		<name>ClientCategoryDayTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.clientgame.market.ClientCategoryDayTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<task>
+		<name>ClientGameCategoryDayTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.clientgame.market.ClientGameCategoryDayTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>ActivateNumTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.clientgame.client.ActivateNumTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>ClientGameYYRegisterTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.channel.dl.ClientGameYYRegisterTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>ClientGameXZChannelTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.channel.dl.ClientGameXZChannelTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>ClientGameLoginChannelTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.channel.dl.ClientGameLoginChannelTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+	<task>
+		<name>ClientGameMediaAdTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.clientgame.media.ClientGameMediaAdTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>ClientGameMediaAdRegTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.clientgame.media.ClientGameMediaAdRegTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>ClientGameEventDayTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.clientgame.market.ClientGameEventDayTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>ClientGameUseFromTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.clientgame.client.ClientGameUseFromTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+</tasks>

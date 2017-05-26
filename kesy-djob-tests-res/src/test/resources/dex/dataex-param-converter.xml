@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<converters>
+	<converter>
+		<name>datax</name>
+		<clazz>org.kesy.djob.dex.datax.DataxParamConverter</clazz>
+	</converter>
+</converters>

@@ -1,0 +1,49 @@
+package org.kesy.djob.sdu.api.model;
+
+import "JobMessageModels.proto";
+import "JobInfoModels.proto";
+ 
+option java_package          = "org.kesy.djob.sdu.api.model";
+option java_outer_classname  = "JobManagerServiceProto";
+option java_generic_services = true;
+
+
+message JobManagerResult {
+    optional bool   isSuccessed   = 1 [default = true];
+}
+
+message RunJobParam {
+	optional string jobId = 1;
+	optional int64 dataFrom = 2;
+	optional int64 dataTo = 3;
+	optional int32 interval = 4 [default = 1];
+}
+
+message RunJobsParam {
+	repeated string jobId = 1;
+	optional int64 dataFrom = 2;
+	optional int64 dataTo = 3;
+	optional int32 interval = 4 [default = 1];
+}
+    
+service JobManagerService {
+    rpc  createJob    (JobMessage) returns (JobManagerResult);
+    rpc  dropAll      (VoidType)   returns (JobManagerResult);
+    rpc  dropJob      (StringType) returns (JobManagerResult);
+    rpc  dropJobs     (StringList) returns (JobManagerResult);
+    rpc  findJob      (StringType) returns (JobInfo);
+    rpc  listJobs     (VoidType)   returns (JobInfoList);
+    rpc  restartAll   (VoidType)   returns (JobManagerResult);
+    rpc  restartJob   (StringType) returns (JobManagerResult);
+    rpc  restartJobs  (StringList) returns (JobManagerResult);
+    rpc  updataJob    (JobMessage) returns (JobManagerResult);
+    
+    rpc  runJob       (RunJobParam)   returns (JobManagerResult);
+    rpc  runJobs      (RunJobsParam)  returns (JobManagerResult);
+    rpc  shutdownAll  (VoidType)   returns (JobManagerResult);
+    rpc  shutdownJob  (StringType) returns (JobManagerResult);
+    rpc  shutdownJobs (StringList) returns (JobManagerResult);
+    rpc  startAll     (VoidType)   returns (JobManagerResult);
+    rpc  startJob     (StringType) returns (JobManagerResult);
+    rpc  startJobs    (StringList) returns (JobManagerResult);
+}

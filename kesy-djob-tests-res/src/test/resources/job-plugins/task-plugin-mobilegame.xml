@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tasks>
+	
+	<!-- 基础数据 -->
+	<task>
+		<name>MobileGetUdbuidService</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegame.base.MobileGetUdbuidServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>MobileGetUdbuidLoginService</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegame.base.MobileGetUdbuidLoginServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>MobileRealTimeOnlineService</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegame.base.MobileRealTimeOnlineServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+	<!-- 用户数据 -->
+	<task>
+		<name>MobileRegisterUserService</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegame.user.MobileRegisterUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>MobileActiveUserService</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegame.user.MobileActiveUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>MobileActiveResidentService</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegame.user.MobileActiveResidentService</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>MobileResidentUserService</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegame.user.MobileResidentUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>MobileAllActiveUserService</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegame.user.MobileAllActiveUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>MobileThirtyDayActiveUserService</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegame.user.MobileThirtyDayActiveUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+	<task>
+		<name>MobileRegisterLiuCunService</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegame.user.MobileRegisterLiuCunServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>MobileActiveLiuShiService</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegame.user.MobileActiveLiuShiServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+	<task>
+		<name>MobileRealtimeRegisterService</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegame.user.MobileRealtimeRegisterServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+	<task>
+		<name>MobileLevelSpreadService</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegame.user.MobileLevelSpreadServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>MobileLevelSpreadActiveLiuShiService</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegame.user.MobileLevelSpreadActiveLiuShiServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>MobileLevelSpreadActiveUserService</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegame.user.MobileLevelSpreadActiveUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>MobileOnlineTimeService</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegame.user.MobileOnlineTimeServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>MobileAcuPcuService</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegame.user.MobileAcuPcuServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+</tasks>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+    	http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath*:job/*.properties</value>
+				<value>classpath*:job-plugins/*.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- <context:annotation-config/> <context:component-scan base-package="com.duowan.cgame.analyse.etl" 
+		/> -->
+
+
+	<bean id="SpringContext"
+		class="com.duowan.cgame.analyse.etl.support.utils.SpringContext" />
+
+	<bean id="dataPersistentService"
+		class="com.duowan.cgame.analyse.etl.support.utils.DataPersistentService" />
+
+
+	<bean id="realTimeDataService" class="com.duowan.common.rpc.client.RPCProxyFactoryBean">
+		<property name="serviceUrl"
+			value="http://webservice.rtd.stat.game.yy.com/rpc/RealTimeDataService" />
+		<property name="serviceInterface"
+			value="com.yy.realtimedata.webservice.RealTimeDataService" />
+	</bean>
+</beans>

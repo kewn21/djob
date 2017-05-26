@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tasks>
+	<!-- 测试 -->
+	<task>
+		<name>task1</name>
+		<clazz>org.kesy.djob.test.task.SampleTask</clazz>
+		<listeners>listener1,listener2</listeners>
+	</task>
+	
+	<!-- 点击事件 -->
+	<task>
+		<name>PcgameClick</name>
+		<clazz>com.duowan.cgame.analyse.etl.event.impl.PcgameClickAnalysisService</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 页面来源 -->
+	<task>
+		<name>OriginPcgameEntry</name>
+		<clazz>com.duowan.cgame.analyse.etl.event.impl.OriginPcgameEntryAnalysisService</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 最受欢迎页面 -->
+	<task>
+		<name>PopagesPcgameEntry</name>
+		<clazz>com.duowan.cgame.analyse.etl.event.impl.PopagesPcgameEntryAnalysisService</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 关键字 -->
+	<task>
+		<name>KeywordPcgameEntry</name>
+		<clazz>com.duowan.cgame.analyse.etl.event.impl.KeywordPcgameEntryAnalysisService</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 搜索引擎 -->
+	<task>
+		<name>SearchPcgameEntry</name>
+		<clazz>com.duowan.cgame.analyse.etl.event.impl.SearchPcgameEntryAnalysisService</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<!-- 下载日志 -->
+	<task>
+		<name>DownloadLog</name>
+		<clazz>com.duowan.cgame.analyse.etl.channel.dl.DownloadLogService</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道下载 -->
+	<task>
+		<name>ChannelDownloadAnalysis</name>
+		<clazz>com.duowan.cgame.analyse.etl.channel.dl.ChannelDownloadAnalysisService</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+<!-- 	<task>
+		<name>DCLoginReport</name>
+		<clazz>com.duowan.cgame.analyse.etl.dc.service.GetUdbuidLoginServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<task>
+		<name>DCRegisterReport</name>
+		<clazz>com.duowan.cgame.analyse.etl.dc.service.GetUdbuidServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task> -->
+	
+	<!-- 大唐无双2登录上报 -->
+	<task>
+		<name>DTWS2LoginReport</name>
+		<clazz>com.duowan.cgame.analyse.etl.dtws2.service.GetUdbuidLoginServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 大唐无双2注册上报 -->
+	<task>
+		<name>DTWS2RegisterReport</name>
+		<clazz>com.duowan.cgame.analyse.etl.dtws2.service.GetUdbuidServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<!-- 灵域登录上报 -->
+	<task>
+		<name>LYOLLoginReport</name>
+		<clazz>com.duowan.cgame.analyse.etl.lyol.service.GetUdbuidLoginServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 灵域注册上报 -->
+	<task>
+		<name>LYOLRegisterReport</name>
+		<clazz>com.duowan.cgame.analyse.etl.lyol.service.GetUdbuidServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<!-- 全民反恐登录上报 -->
+	<task>
+		<name>QMFKLoginReport</name>
+		<clazz>com.duowan.cgame.analyse.etl.qmfk.service.GetUdbuidLoginServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 全民反恐注册上报 -->
+	<task>
+		<name>QMFKRegisterReport</name>
+		<clazz>com.duowan.cgame.analyse.etl.qmfk.service.GetUdbuidServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+	<!-- 魔幻英雄登录上报 -->
+	<task>
+		<name>StrifeLoginReport</name>
+		<clazz>com.duowan.cgame.analyse.etl.strife.service.GetUdbuidLoginServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 魔幻英雄注册上报 -->
+	<task>
+		<name>StrifeRegisterReport</name>
+		<clazz>com.duowan.cgame.analyse.etl.strife.service.GetUdbuidServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<!-- 桃花源记登录上报-->
+	<task>
+		<name>KKTHYJLoginReport</name>
+		<clazz>com.duowan.cgame.analyse.etl.thyj.service.GetUdbuidLoginServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 桃花源记注册上报 -->
+	<task>
+		<name>KKTHYJRegisterReport</name>
+		<clazz>com.duowan.cgame.analyse.etl.thyj.service.GetUdbuidServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+</tasks>

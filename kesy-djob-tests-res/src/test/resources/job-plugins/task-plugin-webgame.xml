@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tasks>
+
+	<!-- 客户端日志 -->
+	<task>
+		<name>NewRechargeDispatcherTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.recharge.NewRechargeDispatcherTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<!-- 客户端分析-->
+	<task>
+		<name>ActiveRechargeDispatcherTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.recharge.ActiveRechargeDispatcherTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<!-- 渠道激活 -->
+	<task>
+		<name>ResidentRechargeDispatcherTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.recharge.ResidentRechargeDispatcherTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<!-- 客户端日志 -->
+	<task>
+		<name>RechargeDispatcherTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.recharge.RechargeDispatcherTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<!-- 客户端分析-->
+	<task>
+		<name>ServerLinkDispatcherTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.link.ServerLinkDispatcherTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<!-- 渠道激活 -->
+	<task>
+		<name>WebGameClickTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.event.impl.WebGameClickTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>outerRefResidentTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.outref.OuterRefResidentTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+		<!-- 客户端日志 -->
+	<task>
+		<name>OriginWebGameEntryTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.event.impl.OriginWebGameEntryTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<!-- 客户端分析-->
+	<task>
+		<name>SearchWebGameEntryTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.event.impl.SearchWebGameEntryTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<!-- 渠道激活 -->
+	<task>
+		<name>KeywordWebGameEntryTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.event.impl.KeywordWebGameEntryTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+		<!-- 客户端日志 -->
+	<task>
+		<name>PopagesWebGameEntryTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.event.impl.PopagesWebGameEntryTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<!-- 客户端分析-->
+	<task>
+		<name>SyncGameConfTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.syncconf.SyncGameConfFromUrlTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>SyncDimOuterRefTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.syncconf.SyncDimOuterRefTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>outerRefRegisterTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.outref.OuterRefRegisterTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>outerRefActiveTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.outref.OuterRefActiveTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>outerRefResidentTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.outref.OuterRefResidentTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>outerRefResidentRechargeTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.outref.OuterRefResidentRechargeTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>CreateGameDbTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.db.CreateGameDbTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>RealTimeOnlineAllGameTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.allgame.RealTimeOnlineAllGameTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>RealTimeStoreAllGameTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.allgame.RealTimeStoreAllGameTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>PcuAcuAllGameTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.allgame.PcuAcuAllGameTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>MonthRechargeDispatcherTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.recharge.MonthRechargeDispatcherTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>ServerGroupRechargeDispatcherTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.recharge.ServerGroupRechargeDispatcherTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>MarketRefDayTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.outref.MarketRefDayTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>SyncDimMarketRefTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.syncconf.SyncDimMarketRefTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>NewRechargeTotalDispatcherTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.recharge.NewRechargeTotalDispatcherTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>ActiveRechargeTotalDispatcherTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.recharge.ActiveRechargeTotalDispatcherTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>MonthRechargeTotalDispatcherTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.recharge.MonthRechargeTotalDispatcherTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>ChannelKpiWeekTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.channel.ChannelKpiWeekTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>ChannelKpiMonthTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.channel.ChannelKpiMonthTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>ChannelProductUserTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.channel.ChannelProductUserTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>ChannelKpiDayTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.channel.ChannelKpiDayTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>SyncDimKpiInnerRefTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.syncconf.SyncDimKpiInnerRefTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>SyncWebGameMarketRefTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.syncconf.SyncWebGameMarketRefTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+	<task>
+		<name>WebGameMarketPmtOldDayTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.market.older.WebGameMarketPmtOldDayTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>WebGameMarketPmtOldAccDayTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.market.older.WebGameMarketPmtOldAccDayTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>WebGameMarketPmtOldMonthTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.market.older.WebGameMarketPmtOldMonthTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>WebGameMarketPmtOldFirstRegMonthTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.market.older.WebGameMarketPmtOldFirstRegMonthTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+	<task>
+		<name>WebGameMarketPmtNewDayTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.market.newer.WebGameMarketPmtNewDayTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>WebGameMarketPmtNewAccDayTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.market.newer.WebGameMarketPmtNewAccDayTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>WebGameMarketPmtNewMonthTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.market.newer.WebGameMarketPmtNewMonthTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>WebGameMarketPmtNewFirstRegMonthTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.market.newer.WebGameMarketPmtNewFirstRegMonthTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>WebGameProjectRankRegTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.projectrank.WebGameProjectRankRegTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>WebGameProjectRankLinkTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.webgame.projectrank.WebGameProjectRankLinkTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+</tasks>

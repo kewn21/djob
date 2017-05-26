@@ -1,0 +1,25 @@
+package org.kesy.djob.sdu.api.model;
+
+option java_package          = "org.kesy.djob.sdu.api.model";
+option java_outer_classname  = "JobMessageModels";
+option java_generic_services = true;
+
+message JobMessage {
+
+    optional string      id         = 1;
+    optional string      name  = 2;
+    optional string      startMode    = 3  [default = "auto"];
+    optional string      execStrategy = 4;
+    optional int64       timeout = 5;
+    optional string      description  = 6;
+    optional string      label = 7;
+
+    optional TaskMessage   taskMessage = 8;
+    optional string        creator          = 9;
+    optional string        principal          = 10;
+    
+    message TaskMessage {
+        optional string execName = 1;
+        optional string execParam = 2;
+    }
+}

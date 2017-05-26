@@ -1,0 +1,143 @@
+﻿@charset "utf-8";
+
+/* 全局 字体大小 颜色 链接 */
+html {	
+	_overflow-x:hidden;
+}
+body {
+	background-color:#fff;
+	font-size:12px;
+	color:#333;
+	font-family:Verdana, Microsoft YaHei, Simsun, Arial Unicode MS, Mingliu, Arial, Helvetica;
+	line-height:18px;
+}
+/* input select textarea 边框 */
+input[type="text"], input[type="password"], .ui-autocomplete-input, textarea, .uneditable-input {
+	border:1px solid #ccc;
+	border-radius:3px;
+	padding:4px;
+}
+/* 左导航链接颜色
+-----------------------------------------------------*/
+#sidebar ul li a{
+	color:#aaa;
+}
+/* 主导航链接颜色
+-----------------------------------------------------*/
+.navbar .nav li a{
+	color:#999;
+}
+.navbar .nav li a:hover{
+	color:#fff;
+}
+.navbar .nav .active a, .navbar .nav .active a:hover{
+	color:#fff;
+}
+/* page-title 样式
+-----------------------------------------------------*/
+.page-title{
+	height:40px;
+	line-height:40px;
+	font-size:16px;
+	font-weight: bold;
+}
+.page-title h2{
+	height:40px;
+	line-height:40px;
+	font-size:16px;
+}
+
+
+
+/* page-header 样式
+-----------------------------------------------------*/
+.page-header {
+	height:40px;
+	line-height:40px;
+	padding-bottom: 0;
+	margin:0 0 10px 0;
+	border-bottom: 1px solid #EEE;
+}
+
+
+
+/* panel 样式
+-----------------------------------------------------*/
+.panel{
+	clear:both;
+	overflow: hidden;
+	margin-bottom:20px;
+	border:1px solid #ddd;	
+	background:#fff;
+}
+.panel .container-fluid {
+	padding:0;
+}
+.panel .panel-head{
+	height: 35px;
+	position: relative;
+	background: url(images/panel/white-title.png);
+	line-height: 34px;
+	padding: 0 10px;
+	color: #2C2C2C;
+	overflow:hidden;
+}
+.panel .panel-head h2{
+	height:35px;
+	line-height:34px;
+	font-size:14px;
+}
+.panel .panel-content {
+	padding:10px;
+}
+.panel .panel-foot, .panel-foot {
+	overflow: hidden;
+	padding: 0 10px;
+	background-color: #eeeeee;
+	border-top: 1px solid #ddd;
+}
+/* table 边框 背景
+-----------------------------------------------------*/
+.table th, .table td {
+	border-top:1px solid #DDD;
+}
+.table-bordered {
+	border: 1px solid #DDD;
+}
+.table tbody tr:hover td, .table tbody tr:hover th {
+	background-color: #fafafa;
+}
+.table-bordered th, .table-bordered td {
+	border-left: 1px solid #DDD;
+}
+.table-striped tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th {
+	background-color: #F9F9F9;
+}
+
+/* form-talbe 边框 背景 间距 */
+.form-table th {
+	background: #EFEFEF;
+}
+.form-table th ,.form-table td {
+	padding: 4px 0;
+	border-bottom: 1px solid #fff;
+}
+
+/* 布局 */
+.wrapper{
+	min-width:1003px;
+}
+.container-popup {
+	padding:0;
+}
+.container-body .container-fluid {
+	padding:0 20px;
+}
+.container-popup .container-fluid {
+	padding:0;
+}
+
+.container-body {
+	padding-top:20px;
+	overflow:auto;
+}

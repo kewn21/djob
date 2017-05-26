@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.kesy</groupId>
+		<artifactId>kesy-djob</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>kesy-djob-tests</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.kesy</groupId>
+			<artifactId>kesy-djob-dex-datax-plugins</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.kesy</groupId>
+			<artifactId>kesy-djob-lac</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>quartz-all</artifactId>
+					<groupId>opensymphony</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.kesy</groupId>
+			<artifactId>kesy-djob-store</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.kesy</groupId>
+			<artifactId>kesy-djob-client</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.kesy</groupId>
+			<artifactId>kesy-djob-sdu</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.kesy</groupId>
+			<artifactId>kesy-djob-tests-res</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.duowan.game</groupId>
+			<artifactId>cgame-analyse-etl-base</artifactId>
+			<version>1.0</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>quartz-all</artifactId>
+					<groupId>opensymphony</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>com.duowan.common</groupId>
+			<artifactId>duowan-common-rpc</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+
+	</dependencies>
+</project>

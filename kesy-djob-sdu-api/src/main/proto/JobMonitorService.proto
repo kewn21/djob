@@ -1,0 +1,32 @@
+package org.kesy.djob.sdu.api.model;
+
+import "JobInfoModels.proto";
+ 
+option java_package          = "org.kesy.djob.sdu.api.model";
+option java_outer_classname  = "JobMonitorServiceProto";
+option java_generic_services = true;
+
+
+message SearchJobMonitorsParam {
+    optional string jobName = 1; 
+    optional string runStatus = 2; 
+    optional int32 pageIndex = 3; 
+    optional int32 pageSize = 4; 
+    optional string startTime = 5; 
+    optional string endTime = 6; 
+}
+
+message GetTaskMonitorsParam {
+    optional string jobId = 1; 
+    optional int32 pageIndex = 2; 
+    optional int32 pageSize = 3; 
+}
+    
+service JobMonitorService {
+    rpc  searchJobMonitorCount      (SearchJobMonitorsParam) returns (IntegerType);
+    rpc  searchJobMonitors      (SearchJobMonitorsParam) returns (JobInfoList);
+    rpc  getTaskMonitorCount      (StringType) returns (IntegerType);
+    rpc  getTaskMonitors      (GetTaskMonitorsParam) returns (TaskInfoList);
+    rpc  searchJobTaskMonitorCount      (SearchJobMonitorsParam) returns (IntegerType);
+    rpc  searchJobTaskMonitors      (SearchJobMonitorsParam) returns (TaskInfoList);
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tasks>
+	
+	
+	<task>
+		<name>FbRealTimeTrigger_CBZZ</name>
+		<clazz>com.duowan.cgame.analyse.etl.cbzz.service.FbRealTimeService</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<!-- 渠道激活 -->
+	<task>
+		<name>getUdbTrigger_CBZZ</name>
+		<clazz>com.duowan.cgame.analyse.etl.cbzz.service.GetUdbuidServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>getUdbLoginTrigger_CBZZ</name>
+		<clazz>com.duowan.cgame.analyse.etl.cbzz.service.GetUdbuidLoginServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>RegisterTrigger_CBZZ</name>
+		<clazz>com.duowan.cgame.analyse.etl.cbzz.service.RegisterUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>ActiveUserTrigger_CBZZ</name>
+		<clazz>com.duowan.cgame.analyse.etl.cbzz.service.ActiveUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>ResidentUserTrigger_CBZZ</name>
+		<clazz>com.duowan.cgame.analyse.etl.cbzz.service.ResidentUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>ThirtyDayActiveUserTrigger_CBZZ</name>
+		<clazz>com.duowan.cgame.analyse.etl.cbzz.service.ThirtyDayActiveUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+	
+</tasks>

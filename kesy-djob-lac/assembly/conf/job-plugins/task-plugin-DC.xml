@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tasks>
+	
+	
+	<task>
+		<name>FbRealTimeTrigger_DC</name>
+		<clazz>com.duowan.cgame.analyse.etl.dc.service.FbRealTimeService</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<!-- 渠道激活 -->
+	<task>
+		<name>getUdbTrigger_DC</name>
+		<clazz>com.duowan.cgame.analyse.etl.dc.service.GetUdbuidServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>getUdbLoginTrigger_DC</name>
+		<clazz>com.duowan.cgame.analyse.etl.dc.service.GetUdbuidLoginServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>RegisterTrigger_DC</name>
+		<clazz>com.duowan.cgame.analyse.etl.dc.service.RegisterUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>ActiveUserTrigger_DC</name>
+		<clazz>com.duowan.cgame.analyse.etl.dc.service.ActiveUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>ResidentUserTrigger_DC</name>
+		<clazz>com.duowan.cgame.analyse.etl.dc.service.ResidentUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>ThirtyDayActiveUserTrigger_DC</name>
+		<clazz>com.duowan.cgame.analyse.etl.dc.service.ThirtyDayActiveUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+	
+	<!-- 访问厂商数据库 -->
+	
+	<task>
+		<name>DCProSpreadTrigger_DC</name>
+		<clazz>com.duowan.cgame.analyse.etl.dc.service.DCProSpreadServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>DcGameCoinTrigger_DC</name>
+		<clazz>com.duowan.cgame.analyse.etl.dc.service.DCGameCoinServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>DcYuanBaoTrigger_DC</name>
+		<clazz>com.duowan.cgame.analyse.etl.dc.service.DCYuanBaoServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+</tasks>

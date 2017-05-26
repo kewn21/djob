@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tasks>
+
+	<task>
+		<name>MobileGameLyUserTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegamely.task.MobileGameLyUserTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+
+	<task>
+		<name>MobileGameLyResidentTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegamely.task.MobileGameLyResidentTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+
+	<task>
+		<name>MobileGameLyChargeTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegamely.task.MobileGameLyChargeTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+
+	<task>
+		<name>MobileGameLyRegUserValueTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegamely.task.MobileGameLyRegUserValueTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+
+	<task>
+		<name>MobileGameLyActivateUserValueTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegamely.task.MobileGameLyActivateUserValueTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>MobileGameLyRoleTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegamely.task.MobileGameLyRoleTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+
+	<task>
+		<name>MobileGameLyOnlineTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegamely.task.MobileGameLyOnlineTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<!-- 循环建立数据库表 -->
+	<task>
+		<name>MobileGameCreateGameDbTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegamely.db.MobileGameCreateGameDbTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+	
+	<task>
+		<name>MobileGameLyActivateUserTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegamely.task.MobileGameLyActivateUserTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+	<task>
+		<name>MobileGameLyActiveUserPreserveTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegamely.task.MobileGameLyActiveUserPreserveTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>MobileGameLyEffectiveRegTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegamely.task.MobileGameLyEffectiveRegTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<task>
+		<name>MobileGameLyNewUserTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegamely.task.MobileGameLyNewUserTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+	<task>
+		<name>MobileGameLyAvgOnlineTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegamely.task.MobileGameLyAvgOnlineTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>MobileGameLyChargeNumTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegamely.task.MobileGameLyChargeNumTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+	<task>
+		<name>MobileGameLyLevelTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegamely.task.MobileGameLyLevelTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+	<task>
+		<name>MobileGameLyTouristNumTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegamely.task.MobileGameLyTouristNumTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>MobileGameLyInstallNumTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegamely.task.MobileGameLyInstallNumTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+	
+	<task>
+		<name>MobileGameLyHallNumTask</name>
+		<clazz>com.duowan.cgame.analyse.etl.mobilegamely.task.MobileGameLyHallNumTask</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+</tasks>

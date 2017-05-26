@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-3.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<bean id="baseDataSource" abstract="true"
+		class="com.jolbox.bonecp.BoneCPDataSource" destroy-method="close">
+		<property name="driverClass" value="${mysql.db.driverClass}" />
+		<property name="idleConnectionTestPeriodInMinutes" value="15" />
+		<property name="idleMaxAgeInMinutes" value="120" />
+		<property name="maxConnectionsPerPartition" value="100" />
+		<property name="minConnectionsPerPartition" value="0" />
+		<property name="partitionCount" value="3" />
+		<property name="acquireIncrement" value="5" />
+		<property name="statementsCacheSize" value="30" />
+		<property name="releaseHelperThreads" value="3" />
+		<property name="initSQL" value="SELECT 1" />
+		<property name="acquireRetryAttempts" value="10" />
+		<property name="acquireRetryDelayInMs" value="10000" />
+		<!-- 调试参数 -->
+		<property name="logStatementsEnabled" value="${dynamicDataSource.printSQL}" />
+		<property name="queryExecuteTimeLimitInMs" value="120000" />
+		<property name="transactionRecoveryEnabled" value="false" />
+		<property name="closeConnectionWatch" value="false" />
+		<!-- 调试参数 -->
+	</bean>
+
+	<bean id="fightDxDataSource" parent="baseDataSource">
+		<property name="poolName" value="fightDxDataSourcePool" />
+		<property name="jdbcUrl" value="${fightDxDataSource.db.url}" />
+		<property name="username" value="${fightDxDataSource.db.username}" />
+		<property name="password" value="${fightDxDataSource.db.password}" />
+	</bean>
+
+	<bean id="fightWtDataSource" parent="baseDataSource">
+		<property name="poolName" value="fightWtDataSourcePool" />
+		<property name="jdbcUrl" value="${fightWtDataSource.db.url}" />
+		<property name="username" value="${fightWtDataSource.db.username}" />
+		<property name="password" value="${fightWtDataSource.db.password}" />
+	</bean>
+
+
+	<bean id="analyseDataSource" parent="baseDataSource">
+		<property name="poolName" value="analyseDataSourcePool" />
+		<property name="jdbcUrl" value="${analyseDataSource.db.url}" />
+		<property name="username" value="${analyseDataSource.db.username}" />
+		<property name="password" value="${analyseDataSource.db.password}" />
+	</bean>
+
+
+	<!-- 游戏多数据源 -->
+	<bean id="gameDynamicDataSource"
+		class="com.duowan.game.common.utils.datasource.DynamicDataSource">
+		<property name="targetDataSources">
+			<map key-type="java.lang.String">
+				<entry key="fightDxDataSource" value-ref="fightDxDataSource" />
+				<entry key="fightWtDataSource" value-ref="fightWtDataSource" />
+
+				<entry key="DCDataSource9001" value-ref="DCDataSource9001" />
+
+				<entry key="DCDataSource9004" value-ref="DCDataSource9004" />
+				<entry key="DCDataSource8002" value-ref="DCDataSource8002" />
+				<entry key="DCDataSource9002" value-ref="DCDataSource9002" />
+				<entry key="DCDataSource9003" value-ref="DCDataSource9003" />
+
+				<entry key="DCDataSource9005" value-ref="DCDataSource9005" />
+
+
+			</map>
+		</property>
+	</bean>
+
+	<bean id="gameJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="gameDynamicDataSource" />
+	</bean>
+
+	<bean id="analyseJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="analyseDataSource" />
+	</bean>
+
+
+	<bean id="slaveAnalyseDataSource" parent="baseDataSource">
+		<property name="poolName" value="slaveAnalyseDataSourcePool" />
+		<property name="jdbcUrl" value="${slaveAnalyseDataSource.db.url}" />
+		<property name="username" value="${slaveAnalyseDataSource.db.username}" />
+		<property name="password" value="${slaveAnalyseDataSource.db.password}" />
+	</bean>
+
+
+	<bean id="slaveAnalyseJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="slaveAnalyseDataSource" />
+	</bean>
+
+
+	<bean id="activate_slaveAnalyseDataSource" parent="baseDataSource">
+		<property name="poolName" value="activate_slaveAnalyseDataSourcePool" />
+		<property name="jdbcUrl" value="${activate_slaveAnalyseDataSource.db.url}" />
+		<property name="username"
+			value="${activate_slaveAnalyseDataSource.db.username}" />
+		<property name="password"
+			value="${activate_slaveAnalyseDataSource.db.password}" />
+	</bean>
+
+
+	<bean id="activate_slaveAnalyseJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="activate_slaveAnalyseDataSource" />
+	</bean>
+
+	<bean id="loginDataSource" parent="baseDataSource">
+		<property name="poolName" value="loginDataSourcePool" />
+		<property name="jdbcUrl" value="${loginDataSource.db.url}" />
+		<property name="username" value="${loginDataSource.db.username}" />
+		<property name="password" value="${loginDataSource.db.password}" />
+	</bean>
+
+	<bean id="loginJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="loginDataSource" />
+	</bean>
+
+
+	<!-- 迁移测试 -->
+	<bean id="testAnalyseDataSource" parent="baseDataSource">
+		<property name="poolName" value="testAnalyseDataSourcePool" />
+		<property name="jdbcUrl" value="${testAnalyseDataSource.db.url}" />
+		<property name="username" value="${testAnalyseDataSource.db.username}" />
+		<property name="password" value="${testAnalyseDataSource.db.password}" />
+	</bean>
+
+	<bean id="testAnalyseJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="testAnalyseDataSource" />
+	</bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<bean id="DCDataSource9001" parent="baseDataSource">
+		<property name="poolName" value="DCDataSourcePool9001" />
+		<property name="jdbcUrl" value="${DCDataSource9001.db.url}" />
+		<property name="username" value="${DCDataSource9001.db.username}" />
+		<property name="password" value="${DCDataSource9001.db.password}" />
+	</bean>
+
+	<bean id="DCDataSource9004" parent="baseDataSource">
+		<property name="poolName" value="DCDataSourcePool9004" />
+		<property name="jdbcUrl" value="${DCDataSource9004.db.url}" />
+		<property name="username" value="${DCDataSource9004.db.username}" />
+		<property name="password" value="${DCDataSource9004.db.password}" />
+	</bean>
+
+	<bean id="DCDataSource8002" parent="baseDataSource">
+		<property name="poolName" value="DCDataSourcePool8002" />
+		<property name="jdbcUrl" value="${DCDataSource8002.db.url}" />
+		<property name="username" value="${DCDataSource8002.db.username}" />
+		<property name="password" value="${DCDataSource8002.db.password}" />
+	</bean>
+
+	<bean id="DCDataSource9002" parent="baseDataSource">
+		<property name="poolName" value="DCDataSourcePool9002" />
+		<property name="jdbcUrl" value="${DCDataSource9002.db.url}" />
+		<property name="username" value="${DCDataSource9002.db.username}" />
+		<property name="password" value="${DCDataSource9002.db.password}" />
+	</bean>
+
+	<bean id="DCDataSource9003" parent="baseDataSource">
+		<property name="poolName" value="DCDataSourcePool9003" />
+		<property name="jdbcUrl" value="${DCDataSource9003.db.url}" />
+		<property name="username" value="${DCDataSource9003.db.username}" />
+		<property name="password" value="${DCDataSource9003.db.password}" />
+	</bean>
+
+
+
+	<bean id="DCDataSource9005" parent="baseDataSource">
+		<property name="poolName" value="DCDataSourcePool9005" />
+		<property name="jdbcUrl" value="${DCDataSource9005.db.url}" />
+		<property name="username" value="${DCDataSource9005.db.username}" />
+		<property name="password" value="${DCDataSource9005.db.password}" />
+	</bean>
+
+
+
+	<!-- 迁移测试 -->
+	<bean id="syncyyDataSource" parent="baseDataSource">
+		<property name="poolName" value="syncyyDataSourcePool" />
+		<property name="jdbcUrl" value="${syncyyDataSource.db.url}" />
+		<property name="username" value="${syncyyDataSource.db.username}" />
+		<property name="password" value="${syncyyDataSource.db.password}" />
+	</bean>
+
+	<bean id="syncyyJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="syncyyDataSource" />
+	</bean>
+
+
+	<bean id="hiidoDataSource" parent="baseDataSource">
+		<property name="poolName" value="hiidoDataSourcePool" />
+		<property name="jdbcUrl" value="${hiidoDataSource.db.url}" />
+		<property name="username" value="${hiidoDataSource.db.username}" />
+		<property name="password" value="${hiidoDataSource.db.password}" />
+	</bean>
+
+	<bean id="hiidoJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="hiidoDataSource" />
+	</bean>
+
+
+	<bean id="sjstoreDataSource" parent="baseDataSource">
+		<property name="poolName" value="sjstoreDataSourcePool" />
+		<property name="jdbcUrl" value="${sjstoreDataSource.db.url}" />
+		<property name="username" value="${sjstoreDataSource.db.username}" />
+		<property name="password" value="${sjstoreDataSource.db.password}" />
+	</bean>
+	<bean id="sjstoreJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="sjstoreDataSource" />
+	</bean>
+
+</beans>

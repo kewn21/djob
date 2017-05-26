@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tasks>
+
+	<!-- 客户端日志 -->
+	<task>
+		<name>ClientLog</name>
+		<clazz>com.duowan.cgame.analyse.etl.channel.dl.ClientLogService</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<!-- 客户端分析-->
+	<task>
+		<name>ChannelClientLogAnalysis</name>
+		<clazz>com.duowan.cgame.analyse.etl.channel.dl.ChannelClientLogAnalysisService</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<!-- 渠道激活 -->
+	<task>
+		<name>ServerDownloadLogAnalysis</name>
+		<clazz>com.duowan.cgame.analyse.etl.channel.dl.ServerDownloadLogService</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>ActiveResidentAnalysis</name>
+		<clazz>com.duowan.cgame.analyse.etl.active.ActiveResidentAnalysisService</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+</tasks>

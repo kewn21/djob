@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<triggers>
+	
+	<trigger>
+		<name>trigger1</name>
+		<clazz>org.kesy.djob.test.task.SampleTrigger</clazz>
+	</trigger>
+	
+</triggers>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tasks>
+	
+	
+	<task>
+		<name>StoreChannelTrigger_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.StoreChannelServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<!-- 渠道激活 -->
+	<task>
+		<name>LevelSpreadTrigger_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.LevelSpreadServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>DataCompareAlarmServiceTrigger_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.DataCompareAlarmServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>activateLogInitTrigger_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.ActivateLogInitServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>ChannelAnalysisTrigger_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.ChannelAnalysisServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>NewRegisterLiuCunTrigger_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.NewRegisterLiuCunServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>ActiveLiuShiTrigger_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.ActiveLiuShiServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>StoreTrigger_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.StoreServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<task>
+		<name>AcuPcuTrigger_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.AcuPcuServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<task>
+		<name>OnlineTimeServiceTrigger_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.OnlineTimeServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<task>
+		<name>RealTimeRegisterTrigger_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.NewRealtimeRegisteriServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+			
+			
+	<task>
+		<name>YYRegisterTrigger_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.YYRegisterServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+			
+			
+			
+	<task>
+		<name>YYRegisterAnalysisTrigger_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.YYRegisterAnalysisServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<task>
+		<name>YYRegisterLogTrigger_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.YYRegisterLogServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+			
+			
+			
+	<task>
+		<name>SyncEventRemindTrigger_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.SyncEventRemindServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>	
+	
+	
+	
+	
+	
+	<task>
+		<name>WebGameActiveliushi_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.WebGameActiveliushiServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>	
+	
+		
+	<task>
+		<name>WebGameActive_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.WebGameActiveServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>	
+	
+	<task>
+		<name>WebGameNewregisterliucun_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.WebGameNewregisterliucunServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>	
+	
+	<task>
+		<name>WebGameRegister_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.WebGameRegisterServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>	
+	
+	
+	<task>
+		<name>WebGameResidentuser_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.WebGameResidentuserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>	
+	
+	<task>
+		<name>WebGameStore_amount_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.WebGameStore_amountServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>	
+	
+	<task>
+		<name>WebGameStore_user_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.WebGameStore_userServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>	
+			
+	<task>
+		<name>WebGameRegister_allReg_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.WebGameRegisterServiceImpl_allReg</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+	<task>
+        <name>WebGameRealTimeStore_allReg_GENERAL</name>
+        <clazz>com.duowan.cgame.analyse.etl.general.service.WebGameRealTimeStoreServiceImpl</clazz>
+        <listeners>listener1</listeners>
+	</task>
+
+		<task>
+					<name>WebGameRealTimeOnline_GENERAL</name>
+					<clazz>com.duowan.cgame.analyse.etl.general.service.WebGameRealTimeOnlineServiceImpl</clazz>
+					<listeners>listener1</listeners>
+		</task>	
+
+	<task>
+				<name>WebGamePcuAcu_GENERAL</name>
+				<clazz>com.duowan.cgame.analyse.etl.general.service.WebGamePcuAcuServiceImpl</clazz>
+				<listeners>listener1</listeners>
+	</task>	
+
+	        <task>
+		                    <name>BuShuWebGameRealTimeOnline_GENERAL</name>
+		                    <clazz>com.duowan.cgame.analyse.etl.general.service.BuShuWebGameRealTimeOnlineServiceImpl</clazz>
+		                    <listeners>listener1</listeners>
+	       </task>
+
+
+
+
+	<task>
+		<name>LevelSpread_ActiveLiuShi_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.LevelSpread_ActiveLiuShiServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>	
+
+	<task>
+		<name>AllActiveUser_GENERAL</name>
+     	<clazz>com.duowan.cgame.analyse.etl.general.service.AllActiveUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>	
+
+
+	<task>
+			<name>UserLoginTimes_GENERAL</name>
+			<clazz>com.duowan.cgame.analyse.etl.general.service.UserLoginTimesServiceImpl</clazz>
+			<listeners>listener1</listeners>
+	</task>	
+				
+	<task>
+		    <name>LevelUpdate_GENERAL</name>
+			<clazz>com.duowan.cgame.analyse.etl.general.service.LevelUpdateServiceImpl</clazz>
+			<listeners>listener1</listeners>
+	</task>	
+
+
+		<task>
+				<name>AutoBuShuWebGameRealTimeOnline_GENERAL</name>
+				<clazz>com.duowan.cgame.analyse.etl.general.service.AutoBuShuWebGameRealTimeOnlineServiceImpl</clazz>
+				<listeners>listener1</listeners>
+		</task>	
+											
+
+		<task>
+				<name>UserAvgLogin_GENERAL</name>
+				<clazz>com.duowan.cgame.analyse.etl.general.service.UserAvgLoginServiceImpl</clazz>
+				<listeners>listener1</listeners>
+		</task>	
+
+		
+	<task>
+		<name>AllCgame_ActiveUser_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.allCgame.AllCgame_ActiveUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>	
+	
+	<task>
+		<name>AllCgame_GetUdbuidLogin_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.allCgame.AllCgame_GetUdbuidLoginServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>	
+	
+	<task>
+		<name>AllCgame_GetUdbuid_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.allCgame.AllCgame_GetUdbuidServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>	
+	
+	<task>
+		<name>AllCgame_RegisterUser_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.allCgame.AllCgame_RegisterUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>	
+	
+	<task>
+		<name>AllCgame_ResidentUser_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.allCgame.AllCgame_ResidentUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>	
+	
+	<task>
+		<name>AllCgame_ThirtyDayActiveUser_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.allCgame.AllCgame_ThirtyDayActiveUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>	
+
+
+	<task>
+		<name>AllCgame_RealTime_Online_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.allCgame.AllCgame_RealTime_OnlineServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>	
+
+	
+	<task>
+			<name>WebGameRealTimeReg_GENERAL</name>
+			<clazz>com.duowan.cgame.analyse.etl.general.service.WebGameRealTimeRegServiceImpl</clazz>
+			<listeners>listener1</listeners>
+	</task>	
+
+
+
+	<task>
+				<name>MXMZJ_realonline</name>
+				<clazz>com.duowan.cgame.analyse.etl.general.service.mxmzj.MXMZJ_realOnline_ServiceImpl</clazz>
+				<listeners>listener1</listeners>
+	</task>	
+					
+	<task>
+			<name>MXMZJ_realstore</name>
+			<clazz>com.duowan.cgame.analyse.etl.general.service.mxmzj.MXMZJ_realStore_ServiceImpl</clazz>
+			<listeners>listener1</listeners>
+	</task>	
+
+
+	<task>
+			<name>MXMZJ_newfeature</name>
+			<clazz>com.duowan.cgame.analyse.etl.general.service.mxmzj.MXMZJ_new_feature_ServiceImpl</clazz>
+			<listeners>listener1</listeners>
+	</task>	
+
+
+
+
+
+
+
+
+	<task>
+				<name>hive_minute</name>
+				<clazz>com.duowan.cgame.analyse.etl.general.service.hive.M_hive_basic_product_minute_count_ServiceImpl</clazz>
+				<listeners>listener1</listeners>
+	</task>	
+										
+									
+	<task>
+				<name>hive_hour</name>
+				<clazz>com.duowan.cgame.analyse.etl.general.service.hive.M_hive_basic_product_hour_count_ServiceImpl</clazz>
+				<listeners>listener1</listeners>
+	</task>	
+																			
+	<task>
+				<name>hive_day</name>
+				<clazz>com.duowan.cgame.analyse.etl.general.service.hive.M_hive_basic_product_day_count_count_ServiceImpl</clazz>
+				<listeners>listener1</listeners>
+	</task>	
+
+	<task>
+		<name>DhUserLevelSpread_GENERAL</name>
+		<clazz>com.duowan.cgame.analyse.etl.general.service.DhUserLevelSpreadServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+
+
+</tasks>

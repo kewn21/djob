@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tasks>
+	
+	
+	<task>
+		<name>FbRealTimeTrigger_MRSG</name>
+		<clazz>com.duowan.cgame.analyse.etl.mrsg.service.FbRealTimeService</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	<!-- 渠道激活 -->
+	<task>
+		<name>getUdbTrigger_MRSG</name>
+		<clazz>com.duowan.cgame.analyse.etl.mrsg.service.GetUdbuidServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>getUdbLoginTrigger_MRSG</name>
+		<clazz>com.duowan.cgame.analyse.etl.mrsg.service.GetUdbuidLoginServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>RegisterTrigger_MRSG</name>
+		<clazz>com.duowan.cgame.analyse.etl.mrsg.service.RegisterUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>ActiveUserTrigger_MRSG</name>
+		<clazz>com.duowan.cgame.analyse.etl.mrsg.service.ActiveUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>ResidentUserTrigger_MRSG</name>
+		<clazz>com.duowan.cgame.analyse.etl.mrsg.service.ResidentUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>ThirtyDayActiveUserTrigger_MRSG</name>
+		<clazz>com.duowan.cgame.analyse.etl.mrsg.service.ThirtyDayActiveUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+	
+	<task>
+		<name>MrsgNewFeatureTrigger_MRSG</name>
+		<clazz>com.duowan.cgame.analyse.etl.mrsg.service.newfeature.MrsgNewFeatureServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+</tasks>

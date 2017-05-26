@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<datasources>
+	
+	<datasource>
+		<name>ds01</name>
+		<type>MySql</type>
+		<params>
+			<ip>115.238.171.226</ip>
+			<username>root</username>
+			<password>thriftdy@819</password>
+			<dbname>dc_oss</dbname>
+		</params>
+	</datasource>
+	
+	<datasource>
+		<name>ds02</name>
+		<type>MySql</type>
+		<params>
+			<ip>172.16.24.209</ip>
+			<username>root</username>
+			<password>1q2w3e4r</password>
+			<dbname>dyloginsl</dbname>
+		</params>
+	</datasource>
+	
+	<datasource>
+		<name>ds_analysis</name>
+		<type>MySql</type>
+		<params>
+			<ip>115.238.171.226</ip>
+			<username>root</username>
+			<password>thriftdy@819</password>
+			<dbname>test</dbname>
+		</params>
+	</datasource>
+	
+	<datasource>
+		<name>ds_cClient</name>
+		<type>MySql</type>
+		<params>
+			<ip>115.238.171.226</ip>
+			<port>3306</port>
+			<username>root</username>
+			<password>thriftdy@819</password>
+			<dbname>test</dbname>
+		</params>
+	</datasource>
+	
+	<datasource>
+		<name>ds_webgame</name>
+		<type>MySql</type>
+		<params>
+			<ip>211.103.26.195</ip>
+			<port>3307</port>
+			<username>syncyy</username>
+			<password>syncyy</password>
+			<dbname>hidoo_wilan</dbname>
+		</params>
+	</datasource>
+	
+</datasources>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>首页框架</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Le styles -->
+<link href="../statics/scripts/plugins/settings/settings.css"
+	rel="stylesheet">
+<link href="../statics/themes/default/style.css" rel="stylesheet">
+<link
+	href="../statics/themes/default/module/baseframe/baseframe.css"
+	rel="stylesheet">
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<style type="text/css">
+.nav-tabs>.active>a,.nav-tabs>.active>a:hover {
+	background-color: #ffffff;
+}
+</style>
+</head>
+
+<body class="container-body">
+	<!-- iframe start -->
+
+	<div class="container-fluid">
+		<ul class="breadcrumb">
+			<li>
+				<a id="returnHref"
+				href="job-manager.html?pageIndex=1">作业管理</a>
+				<span class="divider">/</span>
+			</li>
+			<li>作业设置</li>
+		</ul>
+		<!-- panel内容开始 -->
+		<div class="panel">
+			<div class="panel-head">
+				<div class="row-fluid">
+					<div class="span6 first" id="job_name_info"></div>
+					<div class="span6"></div>
+				</div>
+			</div>
+			<div class="panel-content">
+				<table class="detailtable table table-hover table-bordered">
+					<tr>
+						<td style="width:100px;text-align:right;">名称：</td>
+						<td><input type="text" id="name" name="name"></input></td>
+					</tr>
+					<tr>
+						<td style="width:100px;text-align:right;">启动模式：</td>
+						<td>
+							<select  name="startMode" id="startMode">
+								<option value="auto">自动</option>
+								<option value="manual">手动</option>
+								<option value="forbidden">禁止</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td style="width:100px;text-align:right;">执行策略：</td>
+						<td><input type="text" id="execStrategy" name="execStrategy"></input></td>
+					</tr>
+					<tr>
+						<td style="width:100px;text-align:right;">程序名：</td>
+						<td><input type="text" id=execName name="execName"></input></td>
+					</tr>
+					<tr>
+						<td style="width:100px;text-align:right;">超时时间：</td>
+						<td><input type="text" id="timeout" name="timeout" value="0"></input></td>
+					</tr>
+					<tr>
+						<td style="width:100px;text-align:right;">描述：</td>
+						<td><textarea rows="2" type="text" id="description" name="description"></textarea></td>
+					</tr>
+				</table>
+			</div>
+			<div class="panel-foot">
+				<div style="margin:5px 5px 5px 0;text-align:right;">
+					<a class="btn btn-info" href="javascript:void(0)" onclick="javascript:saveJob()">保存</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- iframe end -->
+
+    <!-- base -->
+    <script src="../statics/scripts/jquery.js"></script>
+    <script src="../statics/scripts/plugins/jquery.cookie.js"></script>
+    <script src="../statics/scripts/plugins/jquery.json.js"></script>
+	<!-- jquery ui core -->
+    <script src="../statics/scripts/plugins/jquery.ui.core.js"></script>
+    <script src="../statics/scripts/plugins/jquery.ui.widget.js"></script>
+    <script src="../statics/scripts/plugins/jquery.ui.mouse.js"></script>
+    <script src="../statics/scripts/plugins/jquery.ui.position.js"></script>
+	<!-- jquery ui plugin -->
+    <script src="../statics/scripts/plugins/jquery.ui.draggable.js"></script>
+    <script src="../statics/scripts/plugins/jquery.ui.droppable.js"></script>
+    <script src="../statics/scripts/plugins/jquery.ui.sortable.js"></script>
+    <script src="../statics/scripts/plugins/jquery.ui.resizable.js"></script>
+    <script src="../statics/scripts/plugins/jquery.ui.sortable.js"></script>
+	<!-- boorstarp -->
+    <script src="../statics/scripts/bootstrap/bootstrap-transition.js"></script>
+    <script src="../statics/scripts/bootstrap/bootstrap-alert.js"></script>
+    <script src="../statics/scripts/bootstrap/bootstrap-modal.js"></script>
+    <script src="../statics/scripts/bootstrap/bootstrap-dropdown.js"></script>
+    <script src="../statics/scripts/bootstrap/bootstrap-scrollspy.js"></script>
+    <script src="../statics/scripts/bootstrap/bootstrap-tab.js"></script>
+    <script src="../statics/scripts/bootstrap/bootstrap-tooltip.js"></script>
+    <script src="../statics/scripts/bootstrap/bootstrap-popover.js"></script>
+    <script src="../statics/scripts/bootstrap/bootstrap-button.js"></script>
+    <script src="../statics/scripts/bootstrap/bootstrap-collapse.js"></script>
+    <script src="../statics/scripts/bootstrap/bootstrap-carousel.js"></script>
+    <script src="../statics/scripts/bootstrap/bootstrap-typeahead.js"></script>
+    <script src="../statics/scripts/bootstrap/application.js"></script>
+	<!-- custom -->
+	<script src="../statics/scripts/plugins/dialog/jquery.dialog.js" type="text/javascript"></script>
+	<script src="../statics/scripts/plugins/settings/settings.js"></script>
+	<script src="../statics/scripts/common.js"></script>
+	<script src="../statics/scripts/browserfix.js"></script>
+	<!-- data -->
+	<script src="js/job-edit.js"></script>
+</body>
+</html>

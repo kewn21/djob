@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>数据作业运维系统</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<!--ico图标-->
+<link type="image/x-icon" rel="icon"
+	href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABuklEQVQ4T41Tv0vDUBC+1IAojdQq3VVwUSxSdVD8DQ5OWsFNcdTBdhF0UJD6D9j+BS5uom46aLE4WSSYQhFxEmxLl1YaQSUp8e6ZxPYlFh8c7+5e7nvfXb4nALcMwwhiagFtAm3QPFZwv0E7FwSBfHsJtQEWb2J8iObhgc24jPs+giSscxsAi08wuUQHhUIB8vk8qKoKY+E0fHZLUF3tA1+ESLF1iiDsWwaAxRHc4rquQyaTgVKpZBOYmU+DRzNYrA75oeViBcROL4VRYiKYPd9jQpRlua6YvqoFYCAjHSDdrZNL7UwTwC46B0Q7m83aN1sOD0D5t/i41c4eAVxhbtbtdjcGHItrAihiMpBKpUDTtH8x0CURxMo2a6MhgPiuw+SyDII5RAtd9zaBqO6wbhq20K5UILT16GBVM0jWwp9D7DrOQc/RqwOAHyJJN4nm5wc5EHuGwO2vJtgAh/0gpTcYfbQph5AURYFymX4xwOjaA7TmvmwGagiFdMkJyTrlpVx8eoHgXBKqzR746G1DKfeDL2pL+QxVGKZat8cUw7zP0fhPgmjTY4pb53UAlDSlvYiu23Omm+ue8zcnJOKk+8JFaQAAAABJRU5ErkJggg==">
+<!-- plugin styles -->
+<link href="statics/scripts/plugins/dialog/jquery.dialog.css"
+	rel="stylesheet">
+<link href="statics/scripts/plugins/settings/settings.css"
+	rel="stylesheet">
+<!-- required -->
+<link href="statics/themes/default/style.css" rel="stylesheet">
+<link href="statics/themes/default/module/baseframe/baseframe.css"
+	rel="stylesheet">
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+<style>
+/* 去掉后台系统的滚动条 */
+html {
+	overflow: hidden;
+}
+</style>
+</head>
+
+<body class="container-index">
+
+	<!-- <li class="active"><a href="#">Home</a></li> -->
+	<script id="topmenu_template" container=".navbar ul.nav:first"
+		type="text/x-jsrender">
+		<li title="{{:name}}" >
+        	<a href="{{:url}}" menuid="{{:id}}">
+        			{{:name}}
+        	</a>
+       </li>
+</script>
+
+	<script id="leftmenu_template" container="#sidebar ul.rootmenu"
+		type="text/x-jsrender">
+	<li>
+		<a href="{{:url}}" class="root" menuid="{{:id}}">
+			<span><img src="{{:icon}}" alt="" /></span>
+			{{:name}}
+		</a>
+		{{if childs}}
+		<ul class="submenu">
+			{{for childs}}
+				<li><a href="{{:url}}" menuid="{{:id}}" >{{:name}}</a></li>
+				{{if childs}} 
+					<ul>
+						 {{for childs}}
+						 	<li><a href="{{:url}}" menuid="{{:id}}" target="mainframe">{{:name}}</a></li>
+						 {{/for}}
+					</ul>
+					{{/if}}
+			{{/for}}
+		</ul>
+		{{/if}}
+	</li>
+</script>
+
+	<div class="wrapper">
+		<!-- 顶部信息 -->
+		<div id="header" class="header">
+			<div class="navbar">
+				<div class="navbar-inner">
+					<div class="container">
+
+						<a class="brand" href="#">数据作业运维系统</a>
+
+						<ul class="nav" style="display: none">
+						</ul>
+
+						<ul class="nav  pull-right" id="headnav">
+							<li><a href="#" onclick="initJobMonitorMenu()"><span
+									class=" icon-list-alt icon-white"></span>作业监控</a></li>
+
+							<li><a href="#" onclick="initJobManagerMenu()"><span
+									class=" icon-list-alt icon-white"></span>作业管理</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- /navbar-inner -->
+			</div>
+			<!-- /navbar -->
+		</div>
+
+		<!-- 导航菜单 -->
+		<div id="sidebar" class="sidebar">
+			<div class="menuHeader">
+				列表菜单<a href="#" id="menucollapse"><span><img
+						src="statics/images/icons/icon-collapse1.png" alt="" /></span></a>
+			</div>
+			<ul class="rootmenu">
+				<li class="current">正在加载...</li>
+			</ul>
+		</div>
+
+		<div id="content" class="content">
+			<!-- iframe start -->
+			<iframe id="mainframe" frameborder="0" name="mainframe"
+				style="height: 100%; width: 100%;"
+				src="job-monitor/job-monitor.html"> </iframe>
+			<!-- iframe end -->
+		</div>
+	</div>
+
+	<!-- base -->
+	<script src="statics/scripts/jquery.js"></script>
+	<script src="statics/scripts/common.js"></script>
+	<script src="statics/scripts/browserfix.js"></script>
+	<script src="statics/scripts/module/baseframe/index.js"></script>
+	<script src="statics/scripts/plugins/jsrender.js"
+		type="text/javascript"></script>
+
+	<script src="statics/scripts/plugins/jquery.cookie.js"></script>
+	<script src="statics/scripts/plugins/jquery.json.js"></script>
+	<!-- jquery ui core -->
+	<script src="statics/scripts/plugins/jquery.ui.core.js"></script>
+	<script src="statics/scripts/plugins/jquery.ui.widget.js"></script>
+	<script src="statics/scripts/plugins/jquery.ui.mouse.js"></script>
+	<script src="statics/scripts/plugins/jquery.ui.position.js"></script>
+	<!-- jquery ui plugin -->
+	<script src="statics/scripts/plugins/jquery.ui.draggable.js"></script>
+	<script src="statics/scripts/plugins/jquery.ui.droppable.js"></script>
+	<script src="statics/scripts/plugins/jquery.ui.sortable.js"></script>
+	<script src="statics/scripts/plugins/jquery.ui.resizable.js"></script>
+	<script src="statics/scripts/plugins/jquery.ui.sortable.js"></script>
+	<!-- boorstarp -->
+	<script src="statics/scripts/bootstrap/bootstrap-transition.js"></script>
+	<script src="statics/scripts/bootstrap/bootstrap-alert.js"></script>
+	<script src="statics/scripts/bootstrap/bootstrap-modal.js"></script>
+	<script src="statics/scripts/bootstrap/bootstrap-dropdown.js"></script>
+	<script src="statics/scripts/bootstrap/bootstrap-scrollspy.js"></script>
+	<script src="statics/scripts/bootstrap/bootstrap-tab.js"></script>
+	<script src="statics/scripts/bootstrap/bootstrap-tooltip.js"></script>
+	<script src="statics/scripts/bootstrap/bootstrap-popover.js"></script>
+	<script src="statics/scripts/bootstrap/bootstrap-button.js"></script>
+	<script src="statics/scripts/bootstrap/bootstrap-collapse.js"></script>
+	<script src="statics/scripts/bootstrap/bootstrap-carousel.js"></script>
+	<script src="statics/scripts/bootstrap/bootstrap-typeahead.js"></script>
+	<script src="statics/scripts/bootstrap/application.js"></script>
+	<!-- custom -->
+	<script src="statics/scripts/plugins/settings/settings.js"></script>
+
+	<script src="menu/job-monitor-menu.js"></script>
+	<script src="menu/job-manager-menu.js"></script>
+	<script src="menu/buffer-menu.js"></script>
+	
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			//菜单初始化
+			$('#headnav li:first-child').addClass('active');
+			$('#sidebar li:first-child').addClass('current');
+			$('#sidebar li:first-child .submenu').show();
+			//菜单事件
+			$('#headnav li').click(function() {
+				$(this).addClass('active').siblings().removeClass('active');
+				menuTrigger();
+			})
+		})
+		function menuTrigger() {
+			//默认激活第一个菜单
+			var length = $('#sidebar li:first-child .submenu li:first-child a').length;
+			if (length > 0) {
+				var href = $(
+						'#sidebar li:first-child .submenu li:first-child a')
+						.attr('href');
+				$('#mainframe').attr('src', href);
+				$('#sidebar li:first-child').addClass('current');
+				$('#sidebar li:first-child .submenu').show();
+			} else {
+				var href = $('#sidebar li:first-child a').attr('href');
+				$('#mainframe').attr('src', href);
+				$('#sidebar li:first-child').addClass('current');
+			}
+		}
+
+		function logout() {
+			$.ajax({
+				type : "get",
+				url : '../logout',
+				contentType : "application/x-www-form-urlencoded;charset=UTF-8",
+				dataType : "text",
+				success : function(data) {
+					if (data.result) {
+						parent.location.reload();
+					} else {
+					}
+				},
+				error : function() {
+					alert("error");
+				}
+			});
+		}
+	</script>
+</body>
+</html>

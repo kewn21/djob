@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tasks>
+	
+	<!-- 渠道激活 -->
+	<task>
+		<name>getUdbTrigger_YYJH</name>
+		<clazz>com.duowan.cgame.analyse.etl.yyjh.service.GetUdbuidServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>getUdbLoginTrigger_YYJH</name>
+		<clazz>com.duowan.cgame.analyse.etl.yyjh.service.GetUdbuidLoginServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>RegisterTrigger_YYJH</name>
+		<clazz>com.duowan.cgame.analyse.etl.yyjh.service.RegisterUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>ActiveUserTrigger_YYJH</name>
+		<clazz>com.duowan.cgame.analyse.etl.yyjh.service.ActiveUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>ResidentUserTrigger_YYJH</name>
+		<clazz>com.duowan.cgame.analyse.etl.yyjh.service.ResidentUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	<!-- 渠道激活 -->
+	<task>
+		<name>ThirtyDayActiveUserTrigger_YYJH</name>
+		<clazz>com.duowan.cgame.analyse.etl.yyjh.service.ThirtyDayActiveUserServiceImpl</clazz>
+		<listeners>listener1</listeners>
+	</task>
+	
+</tasks>
