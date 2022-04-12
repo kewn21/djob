@@ -179,16 +179,16 @@ public class MySqlStressDexTest {
 				String sSql = "SELECT dtStatDate, server, account, testId, channelId, channelName, dtDetail FROM tb_oss_download_log"; 
 				
 				Map<String, String> sparaMap = new HashMap<String, String>();
-				sparaMap.put("ip", "115.238.171.226");
+				sparaMap.put("ip", "localhost");
 				sparaMap.put("username", "root");
-				sparaMap.put("password", "thriftdy@819");
+				sparaMap.put("password", "123456");
 				sparaMap.put("dbname", "dc_oss");
 				sparaMap.put("sql", sSql);
 				
 				Map<String, String> tparaMap = new HashMap<String, String>();
-				tparaMap.put("ip", "115.238.171.226");
+				tparaMap.put("ip", "localhost");
 				tparaMap.put("username", "root");
-				tparaMap.put("password", "thriftdy@819");
+				tparaMap.put("password", "123456");
 				tparaMap.put("dbname", "dc_oss");
 				tparaMap.put("replace", "true");
 				tparaMap.put("table", "tb_oss_download_log_t");
