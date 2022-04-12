@@ -89,10 +89,9 @@ public class MySqlStressDexTest {
 				//Class.forName("com.mysql.jdbc.Driver");
 				BasicDataSource dataSource = new BasicDataSource();
 				dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-				//dataSource.setUrl("jdbc:mysql://115.238.171.226:3306/dc_oss?characterEncoding=UTF-8");
-				dataSource.setUrl("jdbc:mysql://115.238.171.226:3306/dc_oss?characterEncoding=UTF-8&rewriteBatchedStatements=true&useServerPrepStmts=false");
+				dataSource.setUrl("jdbc:mysql://localhost:3306/dc_oss?characterEncoding=UTF-8&rewriteBatchedStatements=true&useServerPrepStmts=false");
 				dataSource.setUsername("root");
-				dataSource.setPassword("thriftdy@819");
+				dataSource.setPassword("123456");
 				
 				JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
 				final List<Map<String, Object>> dataList = jdbcTemplate.queryForList(sSql);

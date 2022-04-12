@@ -39,17 +39,17 @@ public class MySqlDexTest {
 		
 		//源的信息
 		Map<String, String> sparaMap = new HashMap<String, String>();
-		sparaMap.put("ip", "172.16.24.209");
+		sparaMap.put("ip", "localhost");
 		sparaMap.put("username", "root");
-		sparaMap.put("password", "1q2w3e4r");
+		sparaMap.put("password", "123456");
 		sparaMap.put("dbname", "dyloginsl");
 		sparaMap.put("sql", sSql);
 		
 		//目标的信息
 		Map<String, String> tparaMap = new HashMap<String, String>();
-		tparaMap.put("ip", "115.238.171.226");
+		tparaMap.put("ip", "localhost");
 		tparaMap.put("username", "root");
-		tparaMap.put("password", "thriftdy@819");
+		tparaMap.put("password", "123456");
 		tparaMap.put("dbname", "dc_oss");
 		tparaMap.put("table", "tb_oss_download_log_t");
 		tparaMap.put("replace", "true");
